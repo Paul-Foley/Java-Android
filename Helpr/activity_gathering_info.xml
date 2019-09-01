@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.paulfoleyblogs.Helpr.Helpr.GatheringInfo">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/child_s_name"
+            android:textColor="@color/textBlack"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/childNameField"
+            app:layout_constraintStart_toStartOf="@+id/childNameField"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <EditText
+            android:id="@+id/childNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_input_child_name"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneNoDesc"
+            app:layout_constraintStart_toStartOf="@+id/phoneNoDesc"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            />
+
+
+        <TextView
+            android:id="@+id/phoneNoDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/adult_phone_number"
+            android:textColor="@color/textBlack"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneNoField"
+            app:layout_constraintStart_toStartOf="@+id/phoneNoField"
+            app:layout_constraintTop_toBottomOf="@+id/childNameField" />
+
+        <EditText
+            android:id="@+id/phoneNoField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:ems="10"
+            android:hint="@string/hint_input_phone_number"
+            android:inputType="phone"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/emailDesc"
+            app:layout_constraintStart_toStartOf="@+id/emailDesc"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNoDesc" />
+
+
+        <TextView
+            android:id="@+id/emailDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/adult_e_mail"
+            android:textColor="@color/textBlack"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guardianEmailField"
+            app:layout_constraintStart_toStartOf="@+id/guardianEmailField"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNoField" />
+
+
+        <EditText
+            android:id="@+id/guardianEmailField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_input_email"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/emailNot"
+            app:layout_constraintStart_toStartOf="@+id/emailNot"
+            app:layout_constraintTop_toBottomOf="@+id/emailDesc" />
+
+
+        <CheckBox
+            android:id="@+id/emailNot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email_notifications"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneNot"
+            app:layout_constraintStart_toStartOf="@+id/phoneNot"
+            app:layout_constraintTop_toBottomOf="@+id/guardianEmailField" />
+
+        <CheckBox
+            android:id="@+id/phoneNot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_notifications_sms"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/gatherInfoSave"
+            app:layout_constraintTop_toBottomOf="@+id/emailNot" />
+
+
+        <Button
+            android:id="@+id/gatherInfoSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:drawableStart="@drawable/save"
+            android:drawableLeft="@drawable/save"
+            android:drawablePadding="10dp"
+            android:text="@string/save"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNot" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
