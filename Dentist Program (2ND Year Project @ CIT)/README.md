@@ -1,0 +1,1 @@
+Old program created for Dental Surgery. Shows costs of procedures and allowed for bookings. Easily updatable system, for example, this could be updating the price or adding/removing a procedure. This was the first piece of usable software I created.
